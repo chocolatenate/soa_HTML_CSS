@@ -1,699 +1,699 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
-    <title>รีวิววิชาเลือก</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/themify-icons.css" />
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style.css" />
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta
+	name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no"
+	/>
+	<link rel="icon" href="img/favicon.png" type="image/png" />
+	<title>รีวิววิชาเลือก</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/flaticon.css" />
+	<link rel="stylesheet" href="css/themify-icons.css" />
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css" />
 
-  </head>
+</head>
 
-  <style type="text/css">
-    /* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+<style type="text/css">
+	/* Full-width input fields */
+	input[type=text], input[type=password] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
 
-/* Set a style for all buttons */
-button {
-  background-color: #f8b600;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+		box-sizing: border-box;
+	}
 
-button:hover {
-  opacity: 0.8;
-}
+	/* Set a style for all buttons */
+	button {
+		background-color: #f8b600;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+	}
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
+	button:hover {
+		opacity: 0.8;
+	}
 
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
+	/* Extra styles for the cancel button */
+	.cancelbtn {
+		width: auto;
+		padding: 10px 18px;
+		background-color: #f44336;
+	}
 
-img.avatar {
+	/* Center the image and position the close button */
+	.imgcontainer {
+		text-align: center;
+		margin: 24px 0 12px 0;
+		position: relative;
+	}
+
+	img.avatar {
 /*  width: 40%;
-  /height: 40%;*/
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+/height: 40%;*/
+width: 50px;
+height: 50px;
+border-radius: 50%;
 }
 
 .container {
-  padding: 16px;
+	padding: 16px;
 }
 
 span.psw {
-  float: right;
-  padding-top: 16px;
+	float: right;
+	padding-top: 16px;
 }
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding-top: 60px;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+	background-color: #fefefe;
+	margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
 .close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: red;
-  cursor: pointer;
+	color: red;
+	cursor: pointer;
 }
 
 /* Add Zoom Animation */
 .animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
 }
 
 @-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
+	from {-webkit-transform: scale(0)} 
+	to {-webkit-transform: scale(1)}
 }
-  
+
 @keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+	from {transform: scale(0)} 
+	to {transform: scale(1)}
 }
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
 }
-  </style>
+</style>
 
-  <body>
-    <!--================ Start Header Menu Area =================-->
-    <header class="header_area">
-      <div class="main_menu">
-        <div class="search_input" id="search_input_box">
-          <div class="container">
-            <form class="d-flex justify-content-between" method="" action="">
-              <input
-                type="text"
-                class="form-control"
-                id="search_input"
-                placeholder="ค้นหาที่นี่"
-              />
-              <button type="submit" class="btn"></button>
-              <span
-                class="ti-close"
-                id="close_search"
-                title="Close Search"
-              ></span>
-            </form>
-          </div>
-        </div>
+<body>
+	<!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<div class="search_input" id="search_input_box">
+				<div class="container">
+					<form class="d-flex justify-content-between" method="" action="">
+						<input
+						type="text"
+						class="form-control"
+						id="search_input"
+						placeholder="ค้นหาที่นี่"
+						/>
+						<button type="submit" class="btn"></button>
+						<span
+						class="ti-close"
+						id="close_search"
+						title="Close Search"
+						></span>
+					</form>
+				</div>
+			</div>
 
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html"
-              ><img src="img/logo.png" alt=""
-            /></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="icon-bar"></span> <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div
-              class="collapse navbar-collapse offset"
-              id="navbarSupportedContent"
-            >
-              <ul class="nav navbar-nav menu_nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="สร้างบทความใหม่.html"><font face="FC active" size="4">สร้างบทความใหม่</font></a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link" href="หาวิชาที่เหมาะกับฉัน.html"><font face="FC active" size="4">หาวิชาที่เหมาะกับฉัน</font></a>
-                  
-                </li>
-                
-                <li class="nav-item ">
-                  <a class="nav-link" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><font face="FC active" size="4">เข้าสู่ระบบ</font></a>
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"
+					><img src="img/logo.png" alt=""
+					/></a>
+					<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+					>
+					<span class="icon-bar"></span> <span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div
+				class="collapse navbar-collapse offset"
+				id="navbarSupportedContent"
+				>
+				<ul class="nav navbar-nav menu_nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="สร้างบทความใหม่.html"><font face="FC active" size="4">สร้างบทความใหม่</font></a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="หาวิชาที่เหมาะกับฉัน.html"><font face="FC active" size="4">หาวิชาที่เหมาะกับฉัน</font></a>
 
-                </li>
-                
-                
-                <li class="nav-item">
-                  <a href="#" class="nav-link search" id="search">
-                    <i class="ti-search"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php">
-   
+					</li>
 
-    <div class="container">
-      <label for="uname"><b><font face="FC active" size="5">ชื่อผู้ใช้</font></b></label>
-      <font face="FC active" size="5"><input type="text" placeholder="ระบุชื่อผู้ใช้" name="uname" required></font>
+					<li class="nav-item ">
+						<a class="nav-link" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><font face="FC active" size="4">เข้าสู่ระบบ</font></a>
 
-      <label for="psw"><b><font face="FC active" size="5">รหัสผ่าน</font></b></label>
-      <font face="FC active" size="5"><input type="password" placeholder="ระบุรหัสผ่าน" name="psw" required></font>
-        
-      <button type="submit"><font face="FC active" size="5">เข้าสู่ระบบ</font></button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-    <div style="background-color:#f1f1f1">
-      <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-       <a href="#"><font face="FC active" size="5">สมัครบัญชีผู้ใช้</font></a>
-      <font face="FC active" size="5"><span class="psw">ลืม <a href="#">รหัสผ่าน?</a></span></font>
-    </div>
-    </div>
-    
-  </form>
+					</li>
+
+
+					<li class="nav-item">
+						<a href="#" class="nav-link search" id="search">
+							<i class="ti-search"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 </div>
-    </header>
-    <!--================ End Header Menu Area =================-->
+<div id="id01" class="modal">
 
-    <!--================ Start Home Banner Area =================-->
-    <section class="home_banner_area">
-      <div class="banner_inner">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="banner_content text-center">
-                <p class="text-uppercase"><font face="FC active" size="6" >
-                  เว็บไซต์รีวิววิชาเลือกที่ดีที่สุด
-                </font></p>
-                <b><h2 class="text-uppercase mt-4 mb-5"><font face="FC active" size="14">
-                  หาวิชาเลือกที่ถูกใจแค่เพียงปลายนิ้วสัมผัส
-                </font></h2></b>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================ End Home Banner Area =================-->
+	<form class="modal-content animate" action="/action_page.php">
 
-    <!--================ Start Feature Area =================-->
-    <section class="feature_area section_gap_top">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="main_title">
-              <h2 class="mb-3"><font face="FC active" size="10">บทความใหม่</font></h2>
-              <p><font face="FC active" size="5">
-                บทความล่าสุดที่ได้ถูกโพสลงบนเว็บไซต์
-              </p></font>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="single_feature">
-              <div class="icon"><img src="img/courses/1.jpg"  class="avatar"/></div>
-              <div class="desc">
-                <h4 class="mt-3 mb-2">#หัวข้อ</h4>
-                <p>#บทความโดยสรุป.............................................................
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="single_feature">
-              <div class="icon"><img src="img/courses/1.jpg"  class="avatar"/></div>
-              <div class="desc">
-                <h4 class="mt-3 mb-2">#หัวข้อ</h4>
-                <p>#บทความโดยสรุป.............................................................
-                </p>
-              </div>
-            </div>
-          </div>
+		<div class="container">
+			<label for="uname"><b><font face="FC active" size="5">ชื่อผู้ใช้</font></b></label>
+			<font face="FC active" size="5"><input type="text" placeholder="ระบุชื่อผู้ใช้" name="uname" required></font>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="single_feature">
-              <div class="icon"><img src="img/courses/1.jpg"  class="avatar"/></div>
-              <div class="desc">
-                <h4 class="mt-3 mb-2">#หัวข้อ</h4>
-                <p>#บทความโดยสรุป.............................................................
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================ End Feature Area =================-->
+			<label for="psw"><b><font face="FC active" size="5">รหัสผ่าน</font></b></label>
+			<font face="FC active" size="5"><input type="password" placeholder="ระบุรหัสผ่าน" name="psw" required></font>
 
-    <!--================ Start Popular Courses Area =================-->
-    <div class="popular_courses">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="main_title">
-              <h2 class="mb-3"><font face="FC active" size="10">บทความที่มีคนชื่นชอบมากที่สุด</font></h2>
-              
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- single course -->
-          <div class="col-lg-12">
-            <div class="owl-carousel active_course">
-              <div class="single_course">
-                <div class="course_head">
-                  <img class="img-fluid" src="img/courses/c1.jpg" alt="" />
-                </div>
-                <div class="course_content">
-                  <span class="price">A</span>
-                  <span class="tag mb-4 d-inline-block">อ่านต่อ</span>
-                  <h4 class="mb-3">
-                    <a href="course-details.html">#ชื่อบทความ</a>
-                  </h4>
-                  <p>
-                    #บทความโดยสรุป.............................................................
-                  </p>
-                  <div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                    <div class="authr_meta">
-                      <img src="img/courses/author1.png" alt="" />
-                      <span class="d-inline-block ml-2">#ชื่อผู้ใช้</span>
-                    </div>
-                    <div class="mt-lg-0 mt-3">
-                      <span class="meta_info mr-4">
-                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
-                      </span>
-                      <span class="meta_info"
-                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
+			<button type="submit"><font face="FC active" size="5">เข้าสู่ระบบ</font></button>
+			<label>
+				<input type="checkbox" checked="checked" name="remember"> Remember me
+			</label>
+		</div>
+		<div style="background-color:#f1f1f1">
+			<div class="container" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				<a href="#"><font face="FC active" size="5">สมัครบัญชีผู้ใช้</font></a>
+				<font face="FC active" size="5"><span class="psw">ลืม <a href="#">รหัสผ่าน?</a></span></font>
+			</div>
+		</div>
 
-              <div class="single_course">
-                <div class="course_head">
-                  <img class="img-fluid" src="img/courses/c2.jpg" alt="" />
-                </div>
-                <div class="course_content">
-                  <span class="price">A</span>
-                  <span class="tag mb-4 d-inline-block">อ่านต่อ</span>
-                  <h4 class="mb-3">
-                    <a href="course-details.html">#ชื่อบทความ</a>
-                  </h4>
-                  <p>
-                    #บทความโดยสรุป.............................................................
-                  </p>
-                  <div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                    <div class="authr_meta">
-                      <img src="img/courses/author2.png" alt="" />
-                      <span class="d-inline-block ml-2">#ชื่อผู้ใช้</span>
-                    </div>
-                    <div class="mt-lg-0 mt-3">
-                      <span class="meta_info mr-4">
-                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
-                      </span>
-                      <span class="meta_info"
-                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
+	</form>
+</div>
+</header>
+<!--================ End Header Menu Area =================-->
 
-              <div class="single_course">
-                <div class="course_head">
-                  <img class="img-fluid" src="img/courses/c3.jpg" alt="" />
-                </div>
-                <div class="course_content">
-                  <span class="price">A</span>
-                  <span class="tag mb-4 d-inline-block">อ่านต่อ</span>
-                  <h4 class="mb-3">
-                    <a href="course-details.html">#ชื่อบทความ</a>
-                  </h4>
-                  <p>
-                    #บทความโดยสรุป.............................................................
-                  </p>
-                  <div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                    <div class="authr_meta">
-                      <img src="img/courses/author3.png" alt="" />
-                      <span class="d-inline-block ml-2">#ชื่อผู้ใช้</span>
-                    </div>
-                    <div class="mt-lg-0 mt-3">
-                      <span class="meta_info mr-4">
-                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
-                      </span>
-                      <span class="meta_info"
-                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--================ End Popular Courses Area =================-->
+<!--================ Start Home Banner Area =================-->
+<section class="home_banner_area">
+	<div class="banner_inner">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="banner_content text-center">
+						<p class="text-uppercase"><font face="FC active" size="6" >
+							เว็บไซต์รีวิววิชาเลือกที่ดีที่สุด
+						</font></p>
+						<b><h2 class="text-uppercase mt-4 mb-5"><font face="FC active" size="14">
+							หาวิชาเลือกที่ถูกใจแค่เพียงปลายนิ้วสัมผัส
+						</font></h2></b>
 
-   
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--================ End Home Banner Area =================-->
 
-    <!--================ Start Events Area =================-->
-    <div class="events_area">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="main_title">
-              
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <div class="single_event position-relative">
-              <div class="event_thumb">
-                <img src="img/event/e1.jpg" alt="" />
-              </div>
-              <div class="event_details">
-                <div class="d-flex mb-4">
-                  <div class="date"><span>A</span></div>
+<!--================ Start Feature Area =================-->
+<section class="feature_area section_gap_top">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-5">
+				<div class="main_title">
+					<h2 class="mb-3"><font face="FC active" size="10">บทความใหม่</font></h2>
+					<p><font face="FC active" size="5">
+						บทความล่าสุดที่ได้ถูกโพสลงบนเว็บไซต์
+					</p></font>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="single_feature">
+					<div class="icon"><img src="img/courses/1.jpg"  class="avatar"/></div>
+					<div class="desc">
+						<h4 class="mt-3 mb-2">#หัวข้อ</h4>
+						<p>#บทความโดยสรุป.............................................................
+						</p>
+					</div>
+				</div>
+			</div>
 
-                  <div class="time-location">
-                    <p>
-                      <font face="FC active" size="5">#ชื่อบทความ</font>
-                    </p>
-                   
-                  </div>
-                </div>
-                <p>
-                  #บทความโดยสรุป................................
-                </p>
-                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <div class="single_event position-relative">
-              <div class="event_thumb">
-                <img src="img/event/e2.jpg" alt="" />
-              </div>
-              <div class="event_details">
-                <div class="d-flex mb-4">
-                  <div class="date"><span>C+</span></div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single_feature">
+					<div class="icon"><img src="img/courses/1.jpg"  class="avatar"/></div>
+					<div class="desc">
+						<h4 class="mt-3 mb-2">#หัวข้อ</h4>
+						<p>#บทความโดยสรุป.............................................................
+						</p>
+					</div>
+				</div>
+			</div>
 
-                  <div class="time-location">
-                    <p>
-                      <font face="FC active" size="5">#ชื่อบทความ</font>
-                    </p>
-                    
-                  </div>
-                </div>
-                <p>
-                  #บทความโดยสรุป...............................
-                </p>
-                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
-              </div>
-            </div>
-          </div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single_feature">
+					<div class="icon"><img src="img/courses/1.jpg"  class="avatar"/></div>
+					<div class="desc">
+						<h4 class="mt-3 mb-2">#หัวข้อ</h4>
+						<p>#บทความโดยสรุป.............................................................
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--================ End Feature Area =================-->
 
-          <div class="col-lg-12">
-            <div class="text-center pt-lg-5 pt-3">
-              <a href="#" class="event-link">
-                อ่านบทความทั้งหมด <img src="img/next.png" alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--================ End Events Area =================-->
+<!--================ Start Popular Courses Area =================-->
+<div class="popular_courses">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-5">
+				<div class="main_title">
+					<h2 class="mb-3"><font face="FC active" size="10">บทความที่มีคนชื่นชอบมากที่สุด</font></h2>
 
-    <!--================ Start Testimonial Area =================-->
-    <div class="testimonial_area section_gap">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="main_title">
-              
-            </div>
-          </div>
-        </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<!-- single course -->
+			<div class="col-lg-12">
+				<div class="owl-carousel active_course">
+					<div class="single_course">
+						<div class="course_head">
+							<img class="img-fluid" src="img/courses/c1.jpg" alt="" />
+						</div>
+						<div class="course_content">
+							<span class="price">A</span>
+							<span class="tag mb-4 d-inline-block">อ่านต่อ</span>
+							<h4 class="mb-3">
+								<a href="course-details.html">#ชื่อบทความ</a>
+							</h4>
+							<p>
+								#บทความโดยสรุป.............................................................
+							</p>
+							<div
+							class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+							>
+							<div class="authr_meta">
+								<img src="img/courses/author1.png" alt="" />
+								<span class="d-inline-block ml-2">#ชื่อผู้ใช้</span>
+							</div>
+							<div class="mt-lg-0 mt-3">
+								<span class="meta_info mr-4">
+									<a href="#"> <i class="ti-user mr-2"></i>25 </a>
+								</span>
+								<span class="meta_info"
+								><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+								>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        <div class="row">
-          <div class="testi_slider owl-carousel">
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t1.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>#ชื่อผู้ใช้</h4>
-                    <p>
-                      #บทความโดยสรุป.............................................................
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t2.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>#ชื่อผู้ใช้</h4>
-                    <p>
-                      #บทความโดยสรุป.............................................................
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t1.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>#ชื่อผู้ใช้</h4>
-                    <p>
-                      #บทความโดยสรุป.............................................................
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t2.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>#ชื่อผู้ใช้</h4>
-                    <p>
-                      #บทความโดยสรุป.............................................................
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t1.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>#ชื่อผู้ใช้</h4>
-                    <p>
-                      #บทความโดยสรุป.............................................................
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testi_item">
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <img src="img/testimonials/t2.jpg" alt="" />
-                </div>
-                <div class="col-lg-8">
-                  <div class="testi_text">
-                    <h4>#ชื่อผู้ใช้</h4>
-                    <p>
-                      #บทความโดยสรุป.............................................................
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--================ End Testimonial Area =================-->
+				<div class="single_course">
+					<div class="course_head">
+						<img class="img-fluid" src="img/courses/c2.jpg" alt="" />
+					</div>
+					<div class="course_content">
+						<span class="price">A</span>
+						<span class="tag mb-4 d-inline-block">อ่านต่อ</span>
+						<h4 class="mb-3">
+							<a href="course-details.html">#ชื่อบทความ</a>
+						</h4>
+						<p>
+							#บทความโดยสรุป.............................................................
+						</p>
+						<div
+						class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+						>
+						<div class="authr_meta">
+							<img src="img/courses/author2.png" alt="" />
+							<span class="d-inline-block ml-2">#ชื่อผู้ใช้</span>
+						</div>
+						<div class="mt-lg-0 mt-3">
+							<span class="meta_info mr-4">
+								<a href="#"> <i class="ti-user mr-2"></i>25 </a>
+							</span>
+							<span class="meta_info"
+							><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+							>
+						</div>
+					</div>
+				</div>
+			</div>
 
-    <!--================ Start footer Area  =================-->
-    <footer class="footer-area section_gap">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-2 col-md-6 single-footer-widget">
-            <h4>วิชาเลือกเสรี</h4>
-            <ul>
-              <li><a href="#">#ชื่อวิชา</a></li>
-              <li><a href="#">#ชื่อวิชา</a></li>
-              <li><a href="#">#ชื่อวิชา</a></li>
-              <li><a href="#">#ชื่อวิชา</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-6 single-footer-widget">
-            <h4>วิชาเลือกหมวดสังคม</h4>
-            <ul>
-              <li><a href="#">#ชื่อวิชา</a></li>
-              <li><a href="#">#ชื่อวิชา</a></li>
-              <li><a href="#">#ชื่อวิชา</a></li>
-              <li><a href="#">#ชื่อวิชา</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-6 single-footer-widget">
-            <h4>วิชาเลือกหมวดมนุษย์</h4>
-            <ul>
-              <li><a href="#">#ชื่อวิชา</a></li>
-              <li><a href="#">#ชื่อวิชา</a></li>
-              <li><a href="#">#ชื่อวิชา</a></li>
-              <li><a href="#">#ชื่อวิชา</a></li>
-            </ul>
-          </div>
-          
-          
-        
-        </div>
-        <div class="row footer-bottom d-flex justify-content-between">
-          <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-<div class="col-lg-4 col-sm-12 footer-social">
-            <a href="#"><i class="ti-facebook"></i></a>
-            <a href="#"><i class="ti-twitter"></i></a>
-            <a href="#"><i class="ti-dribbble"></i></a>
-            <a href="#"><i class="ti-linkedin"></i></a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          </p>
-          
-          </div>
-      </div>
-    </footer>
-    <!--================ End footer Area  =================-->
+			<div class="single_course">
+				<div class="course_head">
+					<img class="img-fluid" src="img/courses/c3.jpg" alt="" />
+				</div>
+				<div class="course_content">
+					<span class="price">A</span>
+					<span class="tag mb-4 d-inline-block">อ่านต่อ</span>
+					<h4 class="mb-3">
+						<a href="course-details.html">#ชื่อบทความ</a>
+					</h4>
+					<p>
+						#บทความโดยสรุป.............................................................
+					</p>
+					<div
+					class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+					>
+					<div class="authr_meta">
+						<img src="img/courses/author3.png" alt="" />
+						<span class="d-inline-block ml-2">#ชื่อผู้ใช้</span>
+					</div>
+					<div class="mt-lg-0 mt-3">
+						<span class="meta_info mr-4">
+							<a href="#"> <i class="ti-user mr-2"></i>25 </a>
+						</span>
+						<span class="meta_info"
+						><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+<!--================ End Popular Courses Area =================-->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/owl-carousel-thumb.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/mail-script.js"></script>
-    <!--gmaps Js-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="js/gmaps.min.js"></script>
-    <script src="js/theme.js"></script>
-    <script>
+
+
+<!--================ Start Events Area =================-->
+<div class="events_area">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-5">
+				<div class="main_title">
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				<div class="single_event position-relative">
+					<div class="event_thumb">
+						<img src="img/event/e1.jpg" alt="" />
+					</div>
+					<div class="event_details">
+						<div class="d-flex mb-4">
+							<div class="date"><span>A</span></div>
+
+							<div class="time-location">
+								<p>
+									<font face="FC active" size="5">#ชื่อบทความ</font>
+								</p>
+
+							</div>
+						</div>
+						<p>
+							#บทความโดยสรุป................................
+						</p>
+						<a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<div class="single_event position-relative">
+					<div class="event_thumb">
+						<img src="img/event/e2.jpg" alt="" />
+					</div>
+					<div class="event_details">
+						<div class="d-flex mb-4">
+							<div class="date"><span>C+</span></div>
+
+							<div class="time-location">
+								<p>
+									<font face="FC active" size="5">#ชื่อบทความ</font>
+								</p>
+
+							</div>
+						</div>
+						<p>
+							#บทความโดยสรุป...............................
+						</p>
+						<a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-12">
+				<div class="text-center pt-lg-5 pt-3">
+					<a href="all.html" class="event-link">
+						อ่านบทความทั้งหมด <img src="img/next.png" alt="" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--================ End Events Area =================-->
+
+<!--================ Start Testimonial Area =================-->
+<div class="testimonial_area section_gap">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-5">
+				<div class="main_title">
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="testi_slider owl-carousel">
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<img src="img/testimonials/t1.jpg" alt="" />
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>#ชื่อผู้ใช้</h4>
+								<p>
+									#บทความโดยสรุป.............................................................
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<img src="img/testimonials/t2.jpg" alt="" />
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>#ชื่อผู้ใช้</h4>
+								<p>
+									#บทความโดยสรุป.............................................................
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<img src="img/testimonials/t1.jpg" alt="" />
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>#ชื่อผู้ใช้</h4>
+								<p>
+									#บทความโดยสรุป.............................................................
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<img src="img/testimonials/t2.jpg" alt="" />
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>#ชื่อผู้ใช้</h4>
+								<p>
+									#บทความโดยสรุป.............................................................
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<img src="img/testimonials/t1.jpg" alt="" />
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>#ชื่อผู้ใช้</h4>
+								<p>
+									#บทความโดยสรุป.............................................................
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="testi_item">
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<img src="img/testimonials/t2.jpg" alt="" />
+						</div>
+						<div class="col-lg-8">
+							<div class="testi_text">
+								<h4>#ชื่อผู้ใช้</h4>
+								<p>
+									#บทความโดยสรุป.............................................................
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--================ End Testimonial Area =================-->
+
+<!--================ Start footer Area  =================-->
+<footer class="footer-area section_gap">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-md-6 single-footer-widget">
+				<h4>วิชาเลือกเสรี</h4>
+				<ul>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-2 col-md-6 single-footer-widget">
+				<h4>วิชาเลือกหมวดสังคม</h4>
+				<ul>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-2 col-md-6 single-footer-widget">
+				<h4>วิชาเลือกหมวดมนุษย์</h4>
+				<ul>
+					<li><a href="#">Jobs</a></li>
+					<li><a href="#">Brand Assets</a></li>
+					<li><a href="#">Investor Relations</a></li>
+					<li><a href="#">Terms of Service</a></li>
+				</ul>
+			</div>
+
+
+
+		</div>
+		<div class="row footer-bottom d-flex justify-content-between">
+			<p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				<div class="col-lg-4 col-sm-12 footer-social">
+					<a href="#"><i class="ti-facebook"></i></a>
+					<a href="#"><i class="ti-twitter"></i></a>
+					<a href="#"><i class="ti-dribbble"></i></a>
+					<a href="#"><i class="ti-linkedin"></i></a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area  =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/owl-carousel-thumb.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+	<script>
 // Get the modal
 var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
 }
 </script>
-  </body>
+</body>
 </html>
