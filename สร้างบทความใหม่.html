@@ -1,346 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta
-  name="viewport"
-  content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-  <link rel="icon" href="img/favicon.png" type="image/png" />
-  <title>About Us</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <link rel="stylesheet" href="css/flaticon.css" />
-  <link rel="stylesheet" href="css/themify-icons.css" />
-  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
-  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
-  <!-- main css -->
-  <link rel="stylesheet" href="css/style.css" />
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta
+	name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no"
+	/>
+	<link rel="icon" href="img/favicon.png" type="image/png" />
+	<title>About Us</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/flaticon.css" />
+	<link rel="stylesheet" href="css/themify-icons.css" />
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css" />
 </head>
+<script>
+	function afterText() {
+
+  $("p1").append("<input type = "+"text"+">");    // Insert new elements after img
+  $("p3").after("<div class="+"rating"+"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>");
+}
+</script>
 <style type="text/css">
-  /* Full-width input fields */
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    float: left;
-    box-sizing: border-box;
-    resize: vertical;
-  }
- input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+	/* Full-width input fields */
+	input[type=text], input[type=password] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		float: left;
+		box-sizing: border-box;
+		resize: vertical;
+	}
+	input[type=text], select, textarea {
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		resize: vertical;
+	}
+
+	.col-25 {
+		float: left;
+		width: 25%;
+		margin-top: 6px;
+		margin-left: 18px;
+	}
+
+	.col-75 {
+		float: left;
+		width: 72%;
+		margin-top: 6px;
+	}
+	label {
+		padding: 12px 12px 12px 12px;
+		display: inline-block;
+	}
+
+	/* Set a style for all buttons */
+	button {
+		background-color: #f8b600;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+	}
+	button [id=add]{
+		background-color: #f8b600;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+
+	}
+
+	button:hover {
+		opacity: 0.8;
+	}
+
+	/* Extra styles for the cancel button */
+	.cancelbtn {
+		width: auto;
+		padding: 10px 18px;
+		background-color: #f44336;
+	}
+
+	/* Center the image and position the close button */
+	.imgcontainer {
+		text-align: center;
+		margin: 24px 0 12px 0;
+		position: relative;
+	}
+
+	img.avatar {
+		width: 40%;
+		border-radius: 50%;
+	}
+
+	.container {
+		padding: 16px;
+	}
+
+	span.psw {
+		float: right;
+		padding-top: 16px;
+	}
+
+	/* The Modal (background) */
+	.modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		padding-top: 60px;
+	}
+
+	/* Modal Content/Box */
+	.modal-content {
+		background-color: #fefefe;
+		margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+		border: 1px solid #888;
+		width: 80%; /* Could be more or less, depending on screen size */
+	}
+
+	/* The Close Button (x) */
+	.close {
+		position: absolute;
+		right: 25px;
+		top: 0;
+		color: #000;
+		font-size: 35px;
+		font-weight: bold;
+	}
+	content: "";
+	display: table;
+	clear: both;
 }
 
-  .col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-  }
-
-  .col-75 {
-    float: left;
-    width: 72%;
-    margin-top: 6px;
-  }
-  label {
-    padding: 12px 12px 12px 12px;
-    display: inline-block;
-  }
-
-  /* Set a style for all buttons */
-  button {
-    background-color: #f8b600;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  button:hover {
-    opacity: 0.8;
-  }
-
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
-
-  /* Center the image and position the close button */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-  }
-
-  img.avatar {
-    width: 40%;
-    border-radius: 50%;
-  }
-
-  .container {
-    padding: 16px;
-  }
-
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
-
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-  }
-
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-  }
-    content: "";
-  display: table;
-  clear: both;
+.close:hover,
+.close:focus {
+	color: red;
+	cursor: pointer;
 }
 
-  .close:hover,
-  .close:focus {
-    color: red;
-    cursor: pointer;
-  }
-
-  /* Add Zoom Animation */
-  .animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-  }
-
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-  }
-
-  @keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-  }
-
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-     display: block;
-     float: none;
-   }
-   .cancelbtn {
-     width: 100%;
-   }
-
-   @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+/* Add Zoom Animation */
+.animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
 }
- }
+
+@-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)} 
+	to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+	from {transform: scale(0)} 
+	to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+
+	@media screen and (max-width: 600px) {
+		.col-25, .col-75, input[type=submit] {
+			width: 100%;
+			margin-top: 0;
+		}
+	}
+}
+
+.rating {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+}
+.rating > span {
+	display: inline-block;
+	position: relative;
+	width: 1.1em;
+	padding: 12px;
+	margin: 8px 0;
+	font-size: 38px;
+	color: #fdc632;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+	content: "\2605";
+	position: absolute;
+}
 
 </style>
 <body>
-  <!--================ Start Header Menu Area =================-->
-  <header class="header_area white-header">
-    <div class="main_menu">
-      <div class="search_input" id="search_input_box">
-        <div class="container">
-          <form class="d-flex justify-content-between" method="" action="">
-            <input
-            type="text"
-            class="form-control"
-            id="search_input"
-            placeholder="ค้นหาที่นี่"
-            />
-            <button type="submit" class="btn"></button>
-            <span
-            class="ti-close"
-            id="close_search"
-            title="Close Search"
-            ></span>
-          </form>
-        </div>
-      </div>
+	<!--================ Start Header Menu Area =================-->
+	<header class="header_area white-header">
+		<div class="main_menu">
+			<div class="search_input" id="search_input_box">
+				<div class="container">
+					<form class="d-flex justify-content-between" method="" action="">
+						<input
+						type="text"
+						class="form-control"
+						id="search_input"
+						placeholder="ค้นหาที่นี่"
+						/>
+						<button type="submit" class="btn"></button>
+						<span
+						class="ti-close"
+						id="close_search"
+						title="Close Search"
+						></span>
+					</form>
+				</div>
+			</div>
 
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand" href="index.html">
-            <img class="logo-2" src="img/logo2.png" alt="" />
-          </a>
-          <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          >
-          <span class="icon-bar"></span> <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div
-        class="collapse navbar-collapse offset"
-        id="navbarSupportedContent"
-        >
-        <ul class="nav navbar-nav menu_nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="สร้างบทความใหม่.html"><font face="FC active" size="4">สร้างบทความใหม่</font></a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="หาวิชาที่เหมาะกับฉัน.html"><font face="FC active" size="4">หาวิชาที่เหมาะกับฉัน</font></a>
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand" href="index.html">
+						<img class="logo-2" src="img/logo2.png" alt="" />
+					</a>
+					<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+					>
+					<span class="icon-bar"></span> <span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div
+				class="collapse navbar-collapse offset"
+				id="navbarSupportedContent"
+				>
+				<ul class="nav navbar-nav menu_nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="สร้างบทความใหม่.html"><font face="FC active" size="4">สร้างบทความใหม่</font></a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="หาวิชาที่เหมาะกับฉัน.html"><font face="FC active" size="4">หาวิชาที่เหมาะกับฉัน</font></a>
 
-          </li>
+					</li>
 
-          <li class="nav-item ">
-            <a class="nav-link" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><font face="FC active" size="4">เข้าสู่ระบบ</font></a>
+					<li class="nav-item ">
+						<a class="nav-link" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><font face="FC active" size="4">เข้าสู่ระบบ</font></a>
 
-          </li>
+					</li>
 
 
-          <li class="nav-item">
-            <a href="#" class="nav-link search" id="search">
-              <i class="ti-search"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+					<li class="nav-item">
+						<a href="#" class="nav-link search" id="search">
+							<i class="ti-search"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 </div>
 <div id="id01" class="modal">
 
-  <form class="modal-content animate" action="/action_page.php">
+	<form class="modal-content animate" action="/action_page.php">
 
 
-    <div class="container">
-      <label for="uname"><b><font face="FC active" size="5">ชื่อผู้ใช้</font></b></label>
-      <font face="FC active" size="5"><input type="text" placeholder="ระบุชื่อผู้ใช้" name="uname" required></font>
+		<div class="container">
+			<label for="uname"><b><font face="FC active" size="5">ชื่อผู้ใช้</font></b></label>
+			<font face="FC active" size="5"><input type="text" placeholder="ระบุชื่อผู้ใช้" name="uname" required></font>
 
-      <label for="psw"><b><font face="FC active" size="5">รหัสผ่าน</font></b></label>
-      <font face="FC active" size="5"><input type="password" placeholder="ระบุรหัสผ่าน" name="psw" required></font>
+			<label for="psw"><b><font face="FC active" size="5">รหัสผ่าน</font></b></label>
+			<font face="FC active" size="5"><input type="password" placeholder="ระบุรหัสผ่าน" name="psw" required></font>
 
-      <button type="submit"><font face="FC active" size="5">เข้าสู่ระบบ</font></button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-    <div style="background-color:#f1f1f1">
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <a href="#"><font face="FC active" size="5">สมัครบัญชีผู้ใช้</font></a>
-        <font face="FC active" size="5"><span class="psw">ลืม <a href="#">รหัสผ่าน?</a></span></font>
-      </div>
-    </div>
-    
-  </form>
+			<button type="submit"><font face="FC active" size="5">เข้าสู่ระบบ</font></button>
+			<label>
+				<input type="checkbox" checked="checked" name="remember"> Remember me
+			</label>
+		</div>
+		<div style="background-color:#f1f1f1">
+			<div class="container" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				<a href="#"><font face="FC active" size="5">สมัครบัญชีผู้ใช้</font></a>
+				<font face="FC active" size="5"><span class="psw">ลืม <a href="#">รหัสผ่าน?</a></span></font>
+			</div>
+		</div>
+
+	</form>
 </div>
 </header>
 <!--================ End Header Menu Area =================-->
 
 <!--================Home Banner Area =================-->
 <section class="banner_area">
-  <div class="banner_inner d-flex align-items-center">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <div class="banner_content text-center">
-            <h2><font face="FC active" size="17">สร้างบทความใหม่</font></h2>
+	<div class="banner_inner d-flex align-items-center">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					<div class="banner_content text-center">
+						<h2><font face="FC active" size="17">สร้างบทความใหม่</font></h2>
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 <!--================End Home Banner Area =================-->
 
 <!--================ Start About Area =================-->
 <section class="about_area section_gap">
-  <div class="container">
-    <div class="row h_blog_item">
-      <div class="col-lg-6">
-        <div class="h_blog_img">
-          <img class="img-fluid" src="img/about.png" alt="" />
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="h_blog_text">
-          <div class="h_blog_text_inner left right">
-            <h4>Welcome to our Institute</h4>
-            <p>
-              Subdue whales void god which living don't midst lesser
-              yielding over lights whose. Cattle greater brought sixth fly
-              den dry good tree isn't seed stars were.
-            </p>
-            <p>
-              Subdue whales void god which living don't midst lesser yieldi
-              over lights whose. Cattle greater brought sixth fly den dry
-              good tree isn't seed stars were the boring.
-            </p>
-            <a class="primary-btn" href="#">
-              Learn More <i class="ti-arrow-right ml-1"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="row h_blog_item">
+			<div class="col-lg-6">
+				<div class="h_blog_img">
+					<img class="img-fluid" src="img/about.png" alt="" />
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="h_blog_text">
+					<div class="h_blog_text_inner left right">
+						<h4>Welcome to our Institute</h4>
+						<p>
+							Subdue whales void god which living don't midst lesser
+							yielding over lights whose. Cattle greater brought sixth fly
+							den dry good tree isn't seed stars were.
+						</p>
+						<p>
+							Subdue whales void god which living don't midst lesser yieldi
+							over lights whose. Cattle greater brought sixth fly den dry
+							good tree isn't seed stars were the boring.
+						</p>
+						<a class="primary-btn" href="#">
+							Learn More <i class="ti-arrow-right ml-1"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 <!--================ End About Area =================-->
 <section class="Add">
-  <div class="container">
-    <div class="register_form">
-      <h3><font face="Fc active" size="17">สร้างบทความใหม่</font></h3>
-      <form
-      class="form_area"
-      id="myForm"
-      action="mail.html"
-      method="post"
-      >
-      <div class="row">
-        <div class="col-lg-12 form_group">
+	<div class="container">
+		<div class="register_form">
+			<h3><font face="Fc active" size="17">สร้างบทความใหม่</font></h3>
+			<form
+			class="form_area"
+			id="myForm"
+			action="mail.html"
+			method="post"
+			>
+			<div class="row">
+				<div class="col-lg-12 form_group">
 
 <!--           <input
           name="name"
@@ -362,76 +398,100 @@
           required=""
           type="email"
           />
-        -->
-        <div class="row">
-          <div class="col-25">
-            <label for="name">ชื่อบทความ</label>
-          </div>
-          <div class="col-75">
-            <input type="text" id="fname" name="firstname" placeholder="ชื่อบทความของคุณ....">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-25">
-            <label for="name">หมวดหมู่วิชา</label>
-          </div>
-          <div class="col-75">
-            <select id="subject" name="subject">
-              <option value="วิชาเลือกเสรี">วิชาเลือกเสรี</option>
-              <option value="วิชาเลือกหมวดหมู่มนุษย์">วิชาเลือกหมวดหมู่มนุษย์</option>
-              <option value="วิชาเลือกหมวดหมู่สังคม">วิชาเลือกหมวดหมู่สังคม</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-25">
-            <label for="name">ชื่อวิชา</label>
-          </div>
-          <div class="col-75">
-            <select id="subject" name="subject">
-              <option value="Individual Study">Individual Study</option>
-              <option value="Happiness Skills">Happiness Skills</option>
-
-            </select>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-25">
-            <label for="name">รายละเอียดวิชา</label>
-          </div>
-          <div class="col-75">
-            <input type="text" id="fname" name="firstname" placeholder="รายละเอียดวิชาของคุณ...." style="height:200px">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-25">
-            <label for="name">เกรดที่ได้</label>
-          </div>
-          <div class="col-75">
-            <select id="subject" name="subject">
-              <option value="A">A</option>
-              <option value="B+">B+</option>
-              <option value="B">B</option>
-              <option value="C+">C+</option>
-              <option value="C">C</option>
-              <option value="D+">D+</option>
-              <option value="D">D</option>
-              <option value="F">F</option>
-
-            </select>
-          </div>
-        </div>
-
+      -->
+      <div class="row">
+      	<div class="col-25">
+      		<label for="name">ชื่อบทความ</label>
+      	</div>
+      	<div class="col-75">
+      		<input type="text" id="fname" name="firstname" placeholder="ชื่อบทความของคุณ....">
+      	</div>
       </div>
-      <div class="col-lg-12 text-center">
-        <button class="primary-btn">ตกลง</button>
+
+      <div class="row">
+      	<div class="col-25">
+      		<label for="name">หมวดหมู่วิชา</label>
+      	</div>
+      	<div class="col-75">
+      		<select id="subject" name="subject">
+      			<option value="วิชาเลือกเสรี">วิชาเลือกเสรี</option>
+      			<option value="วิชาเลือกหมวดหมู่มนุษย์">วิชาเลือกหมวดหมู่มนุษย์</option>
+      			<option value="วิชาเลือกหมวดหมู่สังคม">วิชาเลือกหมวดหมู่สังคม</option>
+      		</select>
+      	</div>
       </div>
-    </div>
-  </form>
+
+      <div class="row">
+      	<div class="col-25">
+      		<label for="name">ชื่อวิชา</label>
+      	</div>
+      	<div class="col-75">
+      		<select id="subject" name="subject">
+      			<option value="Individual Study">Individual Study</option>
+      			<option value="Happiness Skills">Happiness Skills</option>
+
+      		</select>
+      	</div>
+      </div>
+
+      <div class="row">
+      	<div class="col-25">
+      		<label for="name">รายละเอียดวิชา</label>
+      	</div>
+      	<div class="col-75">
+      		<input type="text" id="about_sb" name="firstname" placeholder="รายละเอียดวิชาของคุณ...." style="height:200px">
+      	</div>
+      </div>
+
+      <div class="row">
+      	<div class="col-25">
+      		<label for="name">เกรดที่ได้</label>
+      	</div>
+      	<div class="col-75">
+      		<select id="subject" name="subject">
+      			<option value="A">A</option>
+      			<option value="B+">B+</option>
+      			<option value="B">B</option>
+      			<option value="C+">C+</option>
+      			<option value="C">C</option>
+      			<option value="D+">D+</option>
+      			<option value="D">D</option>
+      			<option value="F">F</option>
+
+      		</select>
+      	</div>
+      </div>
+
+      <div class="row">
+      	<div class="col-25">
+      		<p1></p1>
+
+      	</div>
+      	<div class="col-75">
+      		<p3></p3>
+      	</div>
+      </div>
+
+      <div class="row">
+      	<div class="col-25">
+
+      		<button  onclick="afterText()">Add Rating</button>
+      	</div>
+      	<div class="col-75">
+      	</div>
+      </div>
+
+
+
+
+
+
+  </div>
+  <div class="col-lg-12 text-center">
+  	<button class="primary-btn">ตกลง</button>
+  </div>
+</div>
+</form>
 </div>
 </section>
 
@@ -440,79 +500,70 @@
 
 <!--================ Start footer Area  =================-->
 <footer class="footer-area section_gap">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2 col-md-6 single-footer-widget">
-        <h4>วิชาเลือกเสรี</h4>
-        <ul>
-          <li><a href="#">#ชื่อวิชา</a></li>
-          <li><a href="#">#ชื่อวิชา</a></li>
-          <li><a href="#">#ชื่อวิชา</a></li>
-          <li><a href="#">#ชื่อวิชา</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-6 single-footer-widget">
-        <h4>วิชาเลือกหมวดสังคม</h4>
-        <ul>
-          <li><a href="#">#ชื่อวิชา</a></li>
-          <li><a href="#">#ชื่อวิชา</a></li>
-          <li><a href="#">#ชื่อวิชา</a></li>
-          <li><a href="#">#ชื่อวิชา</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-6 single-footer-widget">
-        <h4>วิชาเลือกหมวดมนุษย์</h4>
-        <ul>
-          <li><a href="#">#ชื่อวิชา</a></li>
-          <li><a href="#">#ชื่อวิชา</a></li>
-          <li><a href="#">#ชื่อวิชา</a></li>
-          <li><a href="#">#ชื่อวิชา</a></li>
-        </ul>
-      </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 col-md-6 single-footer-widget">
+				<h4>วิชาเลือกเสรี</h4>
+				<ul>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-2 col-md-6 single-footer-widget">
+				<h4>วิชาเลือกหมวดสังคม</h4>
+				<ul>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-2 col-md-6 single-footer-widget">
+				<h4>วิชาเลือกหมวดมนุษย์</h4>
+				<ul>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+					<li><a href="#">#ชื่อวิชา</a></li>
+				</ul>
+			</div>
 
 
 
-    </div>
-    <div class="row footer-bottom d-flex justify-content-between">
-      <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        <div class="col-lg-4 col-sm-12 footer-social">
-          <a href="#"><i class="ti-facebook"></i></a>
-          <a href="#"><i class="ti-twitter"></i></a>
-          <a href="#"><i class="ti-dribbble"></i></a>
-          <a href="#"><i class="ti-linkedin"></i></a>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        </p>
+		</div>
+		<div class="row footer-bottom d-flex justify-content-between">
+			<p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				<div class="col-lg-4 col-sm-12 footer-social">
+					<a href="#"><i class="ti-facebook"></i></a>
+					<a href="#"><i class="ti-twitter"></i></a>
+					<a href="#"><i class="ti-dribbble"></i></a>
+					<a href="#"><i class="ti-linkedin"></i></a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
 
-      </div>
-    </div>
-  </footer>
-  <!--================ End footer Area  =================-->
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area  =================-->
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="js/owl-carousel-thumb.min.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/mail-script.js"></script>
-  <!--gmaps Js-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-  <script src="js/gmaps.min.js"></script>
-  <script src="js/theme.js"></script>
-  <script>
-// Get the modal
-var modal = document.getElementById('id01');
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/owl-carousel-thumb.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+	
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
 </body>
 </html>
